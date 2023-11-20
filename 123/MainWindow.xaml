@@ -1,0 +1,30 @@
+﻿<Window x:Class="_123.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_123"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Ваша текущая разметка -->
+
+        <!-- Добавляем ToolBar в нижнюю часть окна -->
+        <ToolBar DockPanel.Dock="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Button Content="Сохранить" Click="SaveButton_Click" RenderTransformOrigin="0.5,-8.538" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Margin="12,0,0,0"/>
+            <Button Content="Открыть" Click="OpenButton_Click" RenderTransformOrigin="-0.572,-5.852" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150"/>
+            <Button Content="Новый" Click="NewButton_Click" RenderTransformOrigin="13.01,0.979" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150"/>
+            <Button Content="Вырезать" Click="CutButton_Click" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="24" Width="150" HorizontalAlignment="Left">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.588"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.49"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="Копировать" Click="CopyButton_Click" RenderTransformOrigin="0.5,0.5" Width="150"/>
+        </ToolBar>
+    </Grid>
+</Window>
